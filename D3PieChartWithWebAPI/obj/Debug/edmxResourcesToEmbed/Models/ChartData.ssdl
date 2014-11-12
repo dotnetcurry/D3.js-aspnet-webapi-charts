@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NorthwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CityPopulationTable">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="30" />
+    <Property Name="Population" Type="int" />
+  </EntityType>
+  <EntityContainer Name="NorthwindModelStoreContainer">
+    <EntitySet Name="CityPopulationTable" EntityType="Self.CityPopulationTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
